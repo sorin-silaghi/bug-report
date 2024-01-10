@@ -12,10 +12,13 @@ repositories {
 }
 
 dependencies {
+    annotationProcessor("io.micronaut:micronaut-inject-java")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     compileOnly("io.micronaut:micronaut-http-client")
+    // Test is successful when line bellow in uncommented
+//    compileOnly("io.netty.incubator:netty-incubator-codec-http3:0.0.23.Final")
     runtimeOnly("ch.qos.logback:logback-classic")
     testImplementation("io.micronaut:micronaut-http-client")
 }
